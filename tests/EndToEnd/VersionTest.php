@@ -15,7 +15,7 @@ final class VersionTest extends EndToEndTestCase
         $envBuilder = $this->createEnvironmentBuilder();
         $envBuilder->withConfig(['timezone' => 'UTC']);
         $environment = $envBuilder->createEnvironment();
-        $version = InstalledVersions::getPrettyVersion('re-invent-retail/crunz');
+        $version = InstalledVersions::getPrettyVersion('crunzphp/crunz');
         $expectedVersion = "Crunz Command Line Interface {$version}";
 
         // Act
