@@ -58,6 +58,6 @@ $loadAutoloader();
 
 $application = new Application(
     'Crunz Command Line Interface',
-    InstalledVersions::getPrettyVersion('crunzphp/crunz') ?? '1.0.x-dev',
+    InstalledVersions::getPrettyVersion('re-invent-retail/crunz') ?? '1.0.x-dev',
 );
 $application->run();

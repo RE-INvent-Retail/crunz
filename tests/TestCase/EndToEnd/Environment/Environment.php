@@ -196,7 +196,7 @@ final class Environment
                 ],
             ],
             'require' => [
-                'crunzphp/crunz' => '*@dev',
+                're-invent-retail/crunz' => '*@dev',
             ],
         ];
         $contentJson = \json_encode($content, JSON_PRETTY_PRINT);
