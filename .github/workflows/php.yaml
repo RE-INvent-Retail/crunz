@@ -21,17 +21,17 @@ jobs:
                 os:
                     - 'ubuntu-22.04'
                 php:
-                    - '8.0'
                     - '8.1'
                     - '8.2'
                     - '8.3'
+                    - '8.4'
                 dependencies:
                     - 'lowest'
                     - 'highest'
                 symfony_version:
                     - '~5.4.9'
                     - '~6.4.0'
-                    - '~7.0.0'
+                    - '~7.1.0'
                 include:
                     - os: 'windows-2022'
                       php: '8.1'
@@ -39,29 +39,13 @@ jobs:
                       symfony_version: '~6.4.0'
                 exclude:
                     - os: 'ubuntu-22.04'
-                      php: '8.0'
-                      dependencies: 'lowest'
-                      symfony_version: '~6.4.0'
-                    - os: 'ubuntu-22.04'
-                      php: '8.0'
-                      dependencies: 'highest'
-                      symfony_version: '~6.4.0'
-                    - os: 'ubuntu-22.04'
-                      php: '8.0'
-                      dependencies: 'lowest'
-                      symfony_version: '~7.0.0'
-                    - os: 'ubuntu-22.04'
-                      php: '8.0'
-                      dependencies: 'highest'
-                      symfony_version: '~7.0.0'
-                    - os: 'ubuntu-22.04'
                       php: '8.1'
                       dependencies: 'lowest'
-                      symfony_version: '~7.0.0'
+                      symfony_version: '~7.1.0'
                     - os: 'ubuntu-22.04'
                       php: '8.1'
                       dependencies: 'highest'
-                      symfony_version: '~7.0.0'
+                      symfony_version: '~7.1.0'
         runs-on: ${{ matrix.os }}
 
         steps:

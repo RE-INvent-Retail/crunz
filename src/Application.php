@@ -59,7 +59,7 @@ class Application extends SymfonyApplication
     ];
 
     private Container $container;
-    private EnvFlags $envFlags;
+    private readonly EnvFlags $envFlags;
 
     public function __construct(string $appName, string $appVersion)
     {
@@ -169,7 +169,7 @@ class Application extends SymfonyApplication
         ConfigCache $cache,
         ContainerBuilder $container,
         string $class,
-        string $baseClass
+        string $baseClass,
     ): void {
         $dumper = new PhpDumper($container);
 
@@ -257,7 +257,7 @@ class Application extends SymfonyApplication
                 int $errorNumber,
                 string $errorString,
                 string $file,
-                int $line
+                int $line,
             ) use ($io): bool {
                 $io->block(
                     "{$errorString} File {$file}, line {$line}",
